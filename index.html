@@ -1,13 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Wonseok</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #292020, #e0e7ff);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 600px;
+        }
+        .links {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .link-btn {
+            padding: 0.75rem 1.5rem;
+            background-color: #6366f1;
+            color: white;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .link-btn:hover {
+            background-color: #4f46e5;
+        }
+        .socials {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+        }
+        .socials a {
+            margin: 0 0.5rem;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .socials a:hover {
+            color: #6366f1;
+        }
+        footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #999;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, world!</h1>
+<h1 class="fade-in">Wonseok</h1>
+<p class="fade-in" style="transition-delay: 0.2s;">
+    I’m a software engineering student with a passion for computer science, physics, and math.
+</p>
+<div class="socials fade-in" style="transition-delay: 0.6s;">
+    <a href="#"><i class="bi bi-github"></i></a>
+    <a href="#"><i class="bi bi-linkedin"></i></a>
+    <a href="#"><i class="bi bi-twitter"></i></a>
+</div>
+<footer class="fade-in" style="transition-delay: 0.8s;">
+    © 2025 Wonseok. All rights reserved.
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach((el, i) => {
+            setTimeout(() => {
+                el.classList.add('visible');
+            }, i * 200);
+        });
+    });
+
+</script>
 </body>
 </html>
